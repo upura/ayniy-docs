@@ -170,20 +170,20 @@
 
 <span class="c1"># Load configs</span>
 <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;configs/fe000.yml&#39;</span><span class="p">,</span> <span class="s1">&#39;r+&#39;</span><span class="p">)</span>
-<span class="n">feConfigs</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-<span class="n">g</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;configs/exp000.yml&#39;</span><span class="p">,</span> <span class="s1">&#39;r+&#39;</span><span class="p">)</span>
-<span class="n">expConfigs</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+<span class="n">fe_configs</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="n">g</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;configs/run000.yml&#39;</span><span class="p">,</span> <span class="s1">&#39;r+&#39;</span><span class="p">)</span>
+<span class="n">run_configs</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
 
 <span class="c1"># CV strategy</span>
 <span class="n">cv</span> <span class="o">=</span> <span class="n">StratifiedKFold</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
 
 <span class="c1"># Feature engineering</span>
-<span class="n">tabular</span> <span class="o">=</span> <span class="n">Tabular</span><span class="p">(</span><span class="n">feConfigs</span><span class="p">,</span> <span class="n">cv</span><span class="p">)</span>
+<span class="n">tabular</span> <span class="o">=</span> <span class="n">Tabular</span><span class="p">(</span><span class="n">fe_configs</span><span class="p">,</span> <span class="n">cv</span><span class="p">)</span>
 <span class="n">tabular</span><span class="o">.</span><span class="n">create</span><span class="p">()</span>
 <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span> <span class="o">=</span> <span class="n">tabular</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
 
 <span class="c1"># Modeling</span>
-<span class="n">runner</span> <span class="o">=</span> <span class="n">Runner</span><span class="p">(</span><span class="n">expConfigs</span><span class="p">,</span> <span class="n">cv</span><span class="p">)</span>
+<span class="n">runner</span> <span class="o">=</span> <span class="n">Runner</span><span class="p">(</span><span class="n">run_configs</span><span class="p">,</span> <span class="n">cv</span><span class="p">)</span>
 <span class="n">runner</span><span class="o">.</span><span class="n">run_train_cv</span><span class="p">()</span>
 <span class="n">runner</span><span class="o">.</span><span class="n">run_predict_cv</span><span class="p">()</span>
 <span class="n">runner</span><span class="o">.</span><span class="n">submission</span><span class="p">()</span>
