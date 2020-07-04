@@ -90,6 +90,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../setup.html">Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../quick_start_guide.html">Quick Start Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../example.html">Example</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="preprocessing_tabular.html">preprocessing.tabular</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">preprocessing.text</a></li>
@@ -164,7 +165,7 @@
 <span id="preprocessing-text"></span><h1>preprocessing.text<a class="headerlink" href="#module-ayniy.preprocessing.text" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="ayniy.preprocessing.text.BM25Transformer">
-<em class="property">class </em><code class="descclassname">ayniy.preprocessing.text.</code><code class="descname">BM25Transformer</code><span class="sig-paren">(</span><em>use_idf=True</em>, <em>k1=2.0</em>, <em>b=0.75</em><span class="sig-paren">)</span><a class="headerlink" href="#ayniy.preprocessing.text.BM25Transformer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">ayniy.preprocessing.text.</code><code class="sig-name descname">BM25Transformer</code><span class="sig-paren">(</span><em class="sig-param">use_idf=True</em>, <em class="sig-param">k1=2.0</em>, <em class="sig-param">b=0.75</em><span class="sig-paren">)</span><a class="headerlink" href="#ayniy.preprocessing.text.BM25Transformer" title="Permalink to this definition">¶</a></dt>
 <dd><p>use_idf : boolean, optional (default=True)
 k1 : float, optional (default=2.0)
 b  : float, optional (default=0.75)
@@ -174,13 +175,13 @@ Okapi BM25: a non-binary model - Introduction to Information Retrieval
 <a class="reference external" href="http://nlp.stanford.edu/IR-book/html/htmledition/okapi-bm25-a-non-binary-model-1.html">http://nlp.stanford.edu/IR-book/html/htmledition/okapi-bm25-a-non-binary-model-1.html</a></p>
 <dl class="method">
 <dt id="ayniy.preprocessing.text.BM25Transformer.fit">
-<code class="descname">fit</code><span class="sig-paren">(</span><em>X</em><span class="sig-paren">)</span><a class="headerlink" href="#ayniy.preprocessing.text.BM25Transformer.fit" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">fit</code><span class="sig-paren">(</span><em class="sig-param">X</em><span class="sig-paren">)</span><a class="headerlink" href="#ayniy.preprocessing.text.BM25Transformer.fit" title="Permalink to this definition">¶</a></dt>
 <dd><p>X : sparse matrix, [n_samples, n_features] document-term matrix</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="ayniy.preprocessing.text.BM25Transformer.transform">
-<code class="descname">transform</code><span class="sig-paren">(</span><em>X</em>, <em>copy=True</em><span class="sig-paren">)</span><a class="headerlink" href="#ayniy.preprocessing.text.BM25Transformer.transform" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">transform</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">copy=True</em><span class="sig-paren">)</span><a class="headerlink" href="#ayniy.preprocessing.text.BM25Transformer.transform" title="Permalink to this definition">¶</a></dt>
 <dd><p>X : sparse matrix, [n_samples, n_features] document-term matrix
 copy : boolean, optional (default=True)</p>
 </dd></dl>
@@ -189,35 +190,35 @@ copy : boolean, optional (default=True)</p>
 
 <dl class="function">
 <dt id="ayniy.preprocessing.text.get_bert">
-<code class="descclassname">ayniy.preprocessing.text.</code><code class="descname">get_bert</code><span class="sig-paren">(</span><em>train: pandas.core.frame.DataFrame</em>, <em>test: pandas.core.frame.DataFrame</em>, <em>col_definition: dict</em>, <em>option: dict</em><span class="sig-paren">)</span><a class="headerlink" href="#ayniy.preprocessing.text.get_bert" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">ayniy.preprocessing.text.</code><code class="sig-name descname">get_bert</code><span class="sig-paren">(</span><em class="sig-param">train: pandas.core.frame.DataFrame</em>, <em class="sig-param">test: pandas.core.frame.DataFrame</em>, <em class="sig-param">text_col: str</em>, <em class="sig-param">n_components: int</em>, <em class="sig-param">lang: str</em>, <em class="sig-param">batch_size: int = 64</em><span class="sig-paren">)</span> &#x2192; Tuple[pandas.core.frame.DataFrame, pandas.core.frame.DataFrame]<a class="headerlink" href="#ayniy.preprocessing.text.get_bert" title="Permalink to this definition">¶</a></dt>
 <dd><p>col_definition: text_col
 option: n_components, lang={‘ja’, ‘en’}, batch_size</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="ayniy.preprocessing.text.get_count">
-<code class="descclassname">ayniy.preprocessing.text.</code><code class="descname">get_count</code><span class="sig-paren">(</span><em>train: pandas.core.frame.DataFrame</em>, <em>test: pandas.core.frame.DataFrame</em>, <em>col_definition: dict</em>, <em>option: dict</em><span class="sig-paren">)</span><a class="headerlink" href="#ayniy.preprocessing.text.get_count" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">ayniy.preprocessing.text.</code><code class="sig-name descname">get_count</code><span class="sig-paren">(</span><em class="sig-param">train: pandas.core.frame.DataFrame</em>, <em class="sig-param">test: pandas.core.frame.DataFrame</em>, <em class="sig-param">text_col: str</em>, <em class="sig-param">n_components: int</em>, <em class="sig-param">lang: str</em><span class="sig-paren">)</span> &#x2192; Tuple[pandas.core.frame.DataFrame, pandas.core.frame.DataFrame]<a class="headerlink" href="#ayniy.preprocessing.text.get_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>col_definition: text_col
 option: n_components, lang={‘ja’, ‘en’}</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="ayniy.preprocessing.text.get_swem_mean">
-<code class="descclassname">ayniy.preprocessing.text.</code><code class="descname">get_swem_mean</code><span class="sig-paren">(</span><em>train: pandas.core.frame.DataFrame</em>, <em>test: pandas.core.frame.DataFrame</em>, <em>col_definition: dict</em>, <em>option: dict</em><span class="sig-paren">)</span><a class="headerlink" href="#ayniy.preprocessing.text.get_swem_mean" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">ayniy.preprocessing.text.</code><code class="sig-name descname">get_swem_mean</code><span class="sig-paren">(</span><em class="sig-param">train: pandas.core.frame.DataFrame</em>, <em class="sig-param">test: pandas.core.frame.DataFrame</em>, <em class="sig-param">text_col: str</em>, <em class="sig-param">n_components: int</em>, <em class="sig-param">lang: str</em><span class="sig-paren">)</span> &#x2192; Tuple[pandas.core.frame.DataFrame, pandas.core.frame.DataFrame]<a class="headerlink" href="#ayniy.preprocessing.text.get_swem_mean" title="Permalink to this definition">¶</a></dt>
 <dd><p>col_definition: text_col
 option: n_components, lang={‘ja’, ‘en’}</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="ayniy.preprocessing.text.get_tfidf">
-<code class="descclassname">ayniy.preprocessing.text.</code><code class="descname">get_tfidf</code><span class="sig-paren">(</span><em>train: pandas.core.frame.DataFrame</em>, <em>test: pandas.core.frame.DataFrame</em>, <em>col_definition: dict</em>, <em>option: dict</em><span class="sig-paren">)</span><a class="headerlink" href="#ayniy.preprocessing.text.get_tfidf" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">ayniy.preprocessing.text.</code><code class="sig-name descname">get_tfidf</code><span class="sig-paren">(</span><em class="sig-param">train: pandas.core.frame.DataFrame</em>, <em class="sig-param">test: pandas.core.frame.DataFrame</em>, <em class="sig-param">text_col: str</em>, <em class="sig-param">n_components: int</em>, <em class="sig-param">lang: str</em><span class="sig-paren">)</span> &#x2192; Tuple[pandas.core.frame.DataFrame, pandas.core.frame.DataFrame]<a class="headerlink" href="#ayniy.preprocessing.text.get_tfidf" title="Permalink to this definition">¶</a></dt>
 <dd><p>col_definition: text_col
 option: n_components, lang={‘ja’, ‘en’}</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="ayniy.preprocessing.text.text_normalize">
-<code class="descclassname">ayniy.preprocessing.text.</code><code class="descname">text_normalize</code><span class="sig-paren">(</span><em>train: pandas.core.frame.DataFrame</em>, <em>col_definition: dict</em><span class="sig-paren">)</span><a class="headerlink" href="#ayniy.preprocessing.text.text_normalize" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">ayniy.preprocessing.text.</code><code class="sig-name descname">text_normalize</code><span class="sig-paren">(</span><em class="sig-param">train: pandas.core.frame.DataFrame</em>, <em class="sig-param">text_col: str</em><span class="sig-paren">)</span> &#x2192; pandas.core.frame.DataFrame<a class="headerlink" href="#ayniy.preprocessing.text.text_normalize" title="Permalink to this definition">¶</a></dt>
 <dd><p>col_definition: text_col</p>
 </dd></dl>
 
@@ -275,6 +276,7 @@ option: n_components, lang={‘ja’, ‘en’}</p>
       <script type="text/javascript" src="../_static/jquery.js"></script>
       <script type="text/javascript" src="../_static/underscore.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
 
   
 

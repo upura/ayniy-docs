@@ -91,6 +91,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../setup.html">Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../quick_start_guide.html">Quick Start Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../example.html">Example</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">preprocessing.tabular</a></li>
 <li class="toctree-l2"><a class="reference internal" href="preprocessing_text.html">preprocessing.text</a></li>
@@ -165,109 +166,250 @@
 <span id="preprocessing-tabular"></span><h1>preprocessing.tabular<a class="headerlink" href="#module-ayniy.preprocessing.tabular" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="ayniy.preprocessing.tabular.aggregation">
-<code class="descclassname">ayniy.preprocessing.tabular.</code><code class="descname">aggregation</code><span class="sig-paren">(</span><em>train: pandas.core.frame.DataFrame</em>, <em>test: pandas.core.frame.DataFrame</em>, <em>col_definition: dict</em><span class="sig-paren">)</span><a class="headerlink" href="#ayniy.preprocessing.tabular.aggregation" title="Permalink to this definition">¶</a></dt>
-<dd><p>col_definition: groupby_dict, nunique_dict</p>
+<code class="sig-prename descclassname">ayniy.preprocessing.tabular.</code><code class="sig-name descname">aggregation</code><span class="sig-paren">(</span><em class="sig-param">train: pandas.core.frame.DataFrame</em>, <em class="sig-param">test: pandas.core.frame.DataFrame</em>, <em class="sig-param">groupby_dict: dict</em>, <em class="sig-param">nunique_dict: dict</em><span class="sig-paren">)</span> &#x2192; Tuple[pandas.core.frame.DataFrame, pandas.core.frame.DataFrame]<a class="headerlink" href="#ayniy.preprocessing.tabular.aggregation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Aggregation</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>train (pd.DataFrame): train
+test (pd.DataFrame): test
+groupby_dict (dict): settings for groupby
+nunique_dict (dict): settings for nunique</p>
+</dd>
+<dt>Returns:</dt><dd><p>Tuple[pd.DataFrame, pd.DataFrame]: train, test</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="ayniy.preprocessing.tabular.circle_encoding">
-<code class="descclassname">ayniy.preprocessing.tabular.</code><code class="descname">circle_encoding</code><span class="sig-paren">(</span><em>train: pandas.core.frame.DataFrame</em>, <em>test: pandas.core.frame.DataFrame</em>, <em>col_definition: dict</em><span class="sig-paren">)</span><a class="headerlink" href="#ayniy.preprocessing.tabular.circle_encoding" title="Permalink to this definition">¶</a></dt>
-<dd><p>col_definition: encode_col</p>
+<code class="sig-prename descclassname">ayniy.preprocessing.tabular.</code><code class="sig-name descname">circle_encoding</code><span class="sig-paren">(</span><em class="sig-param">train: pandas.core.frame.DataFrame, test: pandas.core.frame.DataFrame, encode_col: List[str]</em><span class="sig-paren">)</span> &#x2192; Tuple[pandas.core.frame.DataFrame, pandas.core.frame.DataFrame]<a class="headerlink" href="#ayniy.preprocessing.tabular.circle_encoding" title="Permalink to this definition">¶</a></dt>
+<dd><p>Circle encoding</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>train (pd.DataFrame): train
+test (pd.DataFrame): test
+encode_col (List[str]): encoded columns</p>
+</dd>
+<dt>Returns:</dt><dd><p>Tuple[pd.DataFrame, pd.DataFrame]: train, test</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="ayniy.preprocessing.tabular.count_encoding">
-<code class="descclassname">ayniy.preprocessing.tabular.</code><code class="descname">count_encoding</code><span class="sig-paren">(</span><em>train: pandas.core.frame.DataFrame</em>, <em>test: pandas.core.frame.DataFrame</em>, <em>col_definition: dict</em><span class="sig-paren">)</span><a class="headerlink" href="#ayniy.preprocessing.tabular.count_encoding" title="Permalink to this definition">¶</a></dt>
-<dd><p>col_definition: encode_col</p>
+<code class="sig-prename descclassname">ayniy.preprocessing.tabular.</code><code class="sig-name descname">count_encoding</code><span class="sig-paren">(</span><em class="sig-param">train: pandas.core.frame.DataFrame, test: pandas.core.frame.DataFrame, encode_col: List[str]</em><span class="sig-paren">)</span> &#x2192; Tuple[pandas.core.frame.DataFrame, pandas.core.frame.DataFrame]<a class="headerlink" href="#ayniy.preprocessing.tabular.count_encoding" title="Permalink to this definition">¶</a></dt>
+<dd><p>Count encoding</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>train (pd.DataFrame): train
+test (pd.DataFrame): test
+encode_col (List[str]): encoded columns</p>
+</dd>
+<dt>Returns:</dt><dd><p>Tuple[pd.DataFrame, pd.DataFrame]: train, test</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="ayniy.preprocessing.tabular.count_encoding_interact">
-<code class="descclassname">ayniy.preprocessing.tabular.</code><code class="descname">count_encoding_interact</code><span class="sig-paren">(</span><em>train: pandas.core.frame.DataFrame</em>, <em>test: pandas.core.frame.DataFrame</em>, <em>col_definition: dict</em><span class="sig-paren">)</span><a class="headerlink" href="#ayniy.preprocessing.tabular.count_encoding_interact" title="Permalink to this definition">¶</a></dt>
-<dd><p>col_definition: encode_col</p>
+<code class="sig-prename descclassname">ayniy.preprocessing.tabular.</code><code class="sig-name descname">count_encoding_interact</code><span class="sig-paren">(</span><em class="sig-param">train: pandas.core.frame.DataFrame, test: pandas.core.frame.DataFrame, encode_col: List[str]</em><span class="sig-paren">)</span> &#x2192; Tuple[pandas.core.frame.DataFrame, pandas.core.frame.DataFrame]<a class="headerlink" href="#ayniy.preprocessing.tabular.count_encoding_interact" title="Permalink to this definition">¶</a></dt>
+<dd><p>Count encoding for interaction</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>train (pd.DataFrame): train
+test (pd.DataFrame): test
+encode_col (List[str]): encoded columns</p>
+</dd>
+<dt>Returns:</dt><dd><p>Tuple[pd.DataFrame, pd.DataFrame]: train, test</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="ayniy.preprocessing.tabular.count_null">
-<code class="descclassname">ayniy.preprocessing.tabular.</code><code class="descname">count_null</code><span class="sig-paren">(</span><em>train: pandas.core.frame.DataFrame</em>, <em>test: pandas.core.frame.DataFrame</em>, <em>col_definition: dict</em><span class="sig-paren">)</span><a class="headerlink" href="#ayniy.preprocessing.tabular.count_null" title="Permalink to this definition">¶</a></dt>
-<dd><p>col_definition: encode_col</p>
+<code class="sig-prename descclassname">ayniy.preprocessing.tabular.</code><code class="sig-name descname">count_null</code><span class="sig-paren">(</span><em class="sig-param">train: pandas.core.frame.DataFrame, test: pandas.core.frame.DataFrame, encode_col: List[str]</em><span class="sig-paren">)</span> &#x2192; Tuple[pandas.core.frame.DataFrame, pandas.core.frame.DataFrame]<a class="headerlink" href="#ayniy.preprocessing.tabular.count_null" title="Permalink to this definition">¶</a></dt>
+<dd><p>Count NaN</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>train (pd.DataFrame): train
+test (pd.DataFrame): test
+encode_col (List[str]): encoded columns</p>
+</dd>
+<dt>Returns:</dt><dd><p>Tuple[pd.DataFrame, pd.DataFrame]: train, test</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="ayniy.preprocessing.tabular.datatime_parser">
-<code class="descclassname">ayniy.preprocessing.tabular.</code><code class="descname">datatime_parser</code><span class="sig-paren">(</span><em>train: pandas.core.frame.DataFrame</em>, <em>test: pandas.core.frame.DataFrame</em>, <em>col_definition: dict</em><span class="sig-paren">)</span><a class="headerlink" href="#ayniy.preprocessing.tabular.datatime_parser" title="Permalink to this definition">¶</a></dt>
-<dd><p>col_definition: encode_col</p>
+<code class="sig-prename descclassname">ayniy.preprocessing.tabular.</code><code class="sig-name descname">datatime_parser</code><span class="sig-paren">(</span><em class="sig-param">train: pandas.core.frame.DataFrame, test: pandas.core.frame.DataFrame, encode_col: List[str]</em><span class="sig-paren">)</span> &#x2192; Tuple[pandas.core.frame.DataFrame, pandas.core.frame.DataFrame]<a class="headerlink" href="#ayniy.preprocessing.tabular.datatime_parser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Datetime columns parser</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>train (pd.DataFrame): train
+test (pd.DataFrame): test
+encode_col (List[str]): encoded columns</p>
+</dd>
+<dt>Returns:</dt><dd><p>Tuple[pd.DataFrame, pd.DataFrame]: train, test</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="ayniy.preprocessing.tabular.delete_cols">
-<code class="descclassname">ayniy.preprocessing.tabular.</code><code class="descname">delete_cols</code><span class="sig-paren">(</span><em>train: pandas.core.frame.DataFrame</em>, <em>test: pandas.core.frame.DataFrame</em>, <em>col_definition: dict</em><span class="sig-paren">)</span><a class="headerlink" href="#ayniy.preprocessing.tabular.delete_cols" title="Permalink to this definition">¶</a></dt>
-<dd><p>col_definition: encode_col</p>
+<code class="sig-prename descclassname">ayniy.preprocessing.tabular.</code><code class="sig-name descname">delete_cols</code><span class="sig-paren">(</span><em class="sig-param">train: pandas.core.frame.DataFrame, test: pandas.core.frame.DataFrame, encode_col: List[str]</em><span class="sig-paren">)</span> &#x2192; Tuple[pandas.core.frame.DataFrame, pandas.core.frame.DataFrame]<a class="headerlink" href="#ayniy.preprocessing.tabular.delete_cols" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete columns</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>train (pd.DataFrame): train
+test (pd.DataFrame): test
+encode_col (List[str]): encoded columns</p>
+</dd>
+<dt>Returns:</dt><dd><p>Tuple[pd.DataFrame, pd.DataFrame]: train, test</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="ayniy.preprocessing.tabular.detect_delete_cols">
-<code class="descclassname">ayniy.preprocessing.tabular.</code><code class="descname">detect_delete_cols</code><span class="sig-paren">(</span><em>train: pandas.core.frame.DataFrame</em>, <em>test: pandas.core.frame.DataFrame</em>, <em>col_definition: dict</em>, <em>option: dict</em><span class="sig-paren">)</span><a class="headerlink" href="#ayniy.preprocessing.tabular.detect_delete_cols" title="Permalink to this definition">¶</a></dt>
-<dd><p>col_definition: escape_col
-option: threshold</p>
+<code class="sig-prename descclassname">ayniy.preprocessing.tabular.</code><code class="sig-name descname">detect_delete_cols</code><span class="sig-paren">(</span><em class="sig-param">train: pandas.core.frame.DataFrame, test: pandas.core.frame.DataFrame, escape_col: List[str], threshold: float</em><span class="sig-paren">)</span> &#x2192; Tuple[pandas.core.frame.DataFrame, pandas.core.frame.DataFrame]<a class="headerlink" href="#ayniy.preprocessing.tabular.detect_delete_cols" title="Permalink to this definition">¶</a></dt>
+<dd><p>Detect unnecessary columns for deleting</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>train (pd.DataFrame): train
+test (pd.DataFrame): test
+escape_col (List[str]): columns not encoded
+threshold (float): deleting threshold for correlations of columns</p>
+</dd>
+<dt>Returns:</dt><dd><p>Tuple[pd.DataFrame, pd.DataFrame]: train, test</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="ayniy.preprocessing.tabular.fillna">
-<code class="descclassname">ayniy.preprocessing.tabular.</code><code class="descname">fillna</code><span class="sig-paren">(</span><em>train: pandas.core.frame.DataFrame</em>, <em>test: pandas.core.frame.DataFrame</em>, <em>col_definition: dict</em>, <em>option: dict</em><span class="sig-paren">)</span><a class="headerlink" href="#ayniy.preprocessing.tabular.fillna" title="Permalink to this definition">¶</a></dt>
-<dd><p>col_definition: encode_col
-option: how={‘median’, ‘mean’}</p>
+<code class="sig-prename descclassname">ayniy.preprocessing.tabular.</code><code class="sig-name descname">fillna</code><span class="sig-paren">(</span><em class="sig-param">train: pandas.core.frame.DataFrame, test: pandas.core.frame.DataFrame, encode_col: List[str], how: str</em><span class="sig-paren">)</span> &#x2192; Tuple[pandas.core.frame.DataFrame, pandas.core.frame.DataFrame]<a class="headerlink" href="#ayniy.preprocessing.tabular.fillna" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replace NaN</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>train (pd.DataFrame): train
+test (pd.DataFrame): test
+encode_col (List[str]): encoded columns
+how (str): how to fill Nan, chosen from ‘median’ or ‘mean’</p>
+</dd>
+<dt>Returns:</dt><dd><p>Tuple[pd.DataFrame, pd.DataFrame]: train, test</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="ayniy.preprocessing.tabular.frequency_encoding">
-<code class="descclassname">ayniy.preprocessing.tabular.</code><code class="descname">frequency_encoding</code><span class="sig-paren">(</span><em>train: pandas.core.frame.DataFrame</em>, <em>test: pandas.core.frame.DataFrame</em>, <em>col_definition: dict</em><span class="sig-paren">)</span><a class="headerlink" href="#ayniy.preprocessing.tabular.frequency_encoding" title="Permalink to this definition">¶</a></dt>
-<dd><p>col_definition: encode_col</p>
+<code class="sig-prename descclassname">ayniy.preprocessing.tabular.</code><code class="sig-name descname">frequency_encoding</code><span class="sig-paren">(</span><em class="sig-param">train: pandas.core.frame.DataFrame, test: pandas.core.frame.DataFrame, encode_col: List[str]</em><span class="sig-paren">)</span> &#x2192; Tuple[pandas.core.frame.DataFrame, pandas.core.frame.DataFrame]<a class="headerlink" href="#ayniy.preprocessing.tabular.frequency_encoding" title="Permalink to this definition">¶</a></dt>
+<dd><p>Frequency encoding</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>train (pd.DataFrame): train
+test (pd.DataFrame): test
+encode_col (List[str]): encoded columns</p>
+</dd>
+<dt>Returns:</dt><dd><p>Tuple[pd.DataFrame, pd.DataFrame]: train, test</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="ayniy.preprocessing.tabular.label_encoding">
-<code class="descclassname">ayniy.preprocessing.tabular.</code><code class="descname">label_encoding</code><span class="sig-paren">(</span><em>train: pandas.core.frame.DataFrame</em>, <em>test: pandas.core.frame.DataFrame</em>, <em>col_definition: dict</em><span class="sig-paren">)</span><a class="headerlink" href="#ayniy.preprocessing.tabular.label_encoding" title="Permalink to this definition">¶</a></dt>
-<dd><p>col_definition: encode_col</p>
+<code class="sig-prename descclassname">ayniy.preprocessing.tabular.</code><code class="sig-name descname">label_encoding</code><span class="sig-paren">(</span><em class="sig-param">train: pandas.core.frame.DataFrame, test: pandas.core.frame.DataFrame, encode_col: List[str]</em><span class="sig-paren">)</span> &#x2192; Tuple[pandas.core.frame.DataFrame, pandas.core.frame.DataFrame]<a class="headerlink" href="#ayniy.preprocessing.tabular.label_encoding" title="Permalink to this definition">¶</a></dt>
+<dd><p>Label encoding</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>train (pd.DataFrame): train
+test (pd.DataFrame): test
+encode_col (List[str]): encoded columns</p>
+</dd>
+<dt>Returns:</dt><dd><p>Tuple[pd.DataFrame, pd.DataFrame]: train, test</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="ayniy.preprocessing.tabular.matrix_factorization">
-<code class="descclassname">ayniy.preprocessing.tabular.</code><code class="descname">matrix_factorization</code><span class="sig-paren">(</span><em>train: pandas.core.frame.DataFrame</em>, <em>test: pandas.core.frame.DataFrame</em>, <em>col_definition: dict</em>, <em>option: dict</em><span class="sig-paren">)</span><a class="headerlink" href="#ayniy.preprocessing.tabular.matrix_factorization" title="Permalink to this definition">¶</a></dt>
-<dd><p>col_definition: encode_col
-option: n_components_lda, n_components_svd</p>
+<code class="sig-prename descclassname">ayniy.preprocessing.tabular.</code><code class="sig-name descname">matrix_factorization</code><span class="sig-paren">(</span><em class="sig-param">train: pandas.core.frame.DataFrame, test: pandas.core.frame.DataFrame, encode_col: List[str], n_components_lda: int = 5, n_components_svd: int = 3</em><span class="sig-paren">)</span> &#x2192; Tuple[pandas.core.frame.DataFrame, pandas.core.frame.DataFrame]<a class="headerlink" href="#ayniy.preprocessing.tabular.matrix_factorization" title="Permalink to this definition">¶</a></dt>
+<dd><p>Matrix factorization</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>train (pd.DataFrame): train
+test (pd.DataFrame): test
+encode_col (List[str]): encoded columns
+n_components_lda (int, optional): the output dimensions for lda. Defaults to 5.
+n_components_svd (int, optional): the output dimensions for svd. Defaults to 3.</p>
+</dd>
+<dt>Returns:</dt><dd><p>Tuple[pd.DataFrame, pd.DataFrame]: train, test</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="ayniy.preprocessing.tabular.numeric_interact">
-<code class="descclassname">ayniy.preprocessing.tabular.</code><code class="descname">numeric_interact</code><span class="sig-paren">(</span><em>train: pandas.core.frame.DataFrame</em>, <em>test: pandas.core.frame.DataFrame</em>, <em>col_definition: dict</em><span class="sig-paren">)</span><a class="headerlink" href="#ayniy.preprocessing.tabular.numeric_interact" title="Permalink to this definition">¶</a></dt>
-<dd><p>col_definition: encode_col</p>
+<code class="sig-prename descclassname">ayniy.preprocessing.tabular.</code><code class="sig-name descname">numeric_interact</code><span class="sig-paren">(</span><em class="sig-param">train: pandas.core.frame.DataFrame, test: pandas.core.frame.DataFrame, encode_col: List[str]</em><span class="sig-paren">)</span> &#x2192; Tuple[pandas.core.frame.DataFrame, pandas.core.frame.DataFrame]<a class="headerlink" href="#ayniy.preprocessing.tabular.numeric_interact" title="Permalink to this definition">¶</a></dt>
+<dd><p>Numerical interaction</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>train (pd.DataFrame): train
+test (pd.DataFrame): test
+encode_col (List[str]): encoded columns</p>
+</dd>
+<dt>Returns:</dt><dd><p>Tuple[pd.DataFrame, pd.DataFrame]: train, test</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="ayniy.preprocessing.tabular.save_as_pickle">
-<code class="descclassname">ayniy.preprocessing.tabular.</code><code class="descname">save_as_pickle</code><span class="sig-paren">(</span><em>train: pandas.core.frame.DataFrame</em>, <em>test: pandas.core.frame.DataFrame</em>, <em>col_definition: dict</em>, <em>option: dict</em><span class="sig-paren">)</span><a class="headerlink" href="#ayniy.preprocessing.tabular.save_as_pickle" title="Permalink to this definition">¶</a></dt>
-<dd><p>col_definition: target_col
-option: output_dir, exp_id</p>
+<code class="sig-prename descclassname">ayniy.preprocessing.tabular.</code><code class="sig-name descname">save_as_pickle</code><span class="sig-paren">(</span><em class="sig-param">train: pandas.core.frame.DataFrame</em>, <em class="sig-param">test: pandas.core.frame.DataFrame</em>, <em class="sig-param">target_col: str</em>, <em class="sig-param">exp_id: str</em>, <em class="sig-param">output_dir: str = '../input'</em><span class="sig-paren">)</span> &#x2192; Tuple[pandas.core.frame.DataFrame, pandas.core.frame.DataFrame]<a class="headerlink" href="#ayniy.preprocessing.tabular.save_as_pickle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save X_train, X_test and y_train as pickel format</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>train (pd.DataFrame): train
+test (pd.DataFrame): test
+target_col (str): target column
+exp_id (str): experiment id
+output_dir (str, optional): output directory. Defaults to ‘../input’.</p>
+</dd>
+<dt>Returns:</dt><dd><p>Tuple[pd.DataFrame, pd.DataFrame]: train, test</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="ayniy.preprocessing.tabular.standerize">
-<code class="descclassname">ayniy.preprocessing.tabular.</code><code class="descname">standerize</code><span class="sig-paren">(</span><em>train: pandas.core.frame.DataFrame</em>, <em>test: pandas.core.frame.DataFrame</em>, <em>col_definition: dict</em><span class="sig-paren">)</span><a class="headerlink" href="#ayniy.preprocessing.tabular.standerize" title="Permalink to this definition">¶</a></dt>
-<dd><p>col_definition: encode_col</p>
+<code class="sig-prename descclassname">ayniy.preprocessing.tabular.</code><code class="sig-name descname">standerize</code><span class="sig-paren">(</span><em class="sig-param">train: pandas.core.frame.DataFrame, test: pandas.core.frame.DataFrame, encode_col: List[str]</em><span class="sig-paren">)</span> &#x2192; Tuple[pandas.core.frame.DataFrame, pandas.core.frame.DataFrame]<a class="headerlink" href="#ayniy.preprocessing.tabular.standerize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Standerization</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>train (pd.DataFrame): train
+test (pd.DataFrame): test
+encode_col (List[str]): encoded columns</p>
+</dd>
+<dt>Returns:</dt><dd><p>Tuple[pd.DataFrame, pd.DataFrame]: train, test</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="ayniy.preprocessing.tabular.target_encoding">
-<code class="descclassname">ayniy.preprocessing.tabular.</code><code class="descname">target_encoding</code><span class="sig-paren">(</span><em>train: pandas.core.frame.DataFrame</em>, <em>test: pandas.core.frame.DataFrame</em>, <em>col_definition: dict</em>, <em>option: dict</em><span class="sig-paren">)</span><a class="headerlink" href="#ayniy.preprocessing.tabular.target_encoding" title="Permalink to this definition">¶</a></dt>
-<dd><p>col_definition: encode_col, target_col
-option: cv</p>
+<code class="sig-prename descclassname">ayniy.preprocessing.tabular.</code><code class="sig-name descname">target_encoding</code><span class="sig-paren">(</span><em class="sig-param">train: pandas.core.frame.DataFrame, test: pandas.core.frame.DataFrame, encode_col: List[str], target_col: str, cv</em><span class="sig-paren">)</span> &#x2192; Tuple[pandas.core.frame.DataFrame, pandas.core.frame.DataFrame]<a class="headerlink" href="#ayniy.preprocessing.tabular.target_encoding" title="Permalink to this definition">¶</a></dt>
+<dd><p>Target encoding</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>train (pd.DataFrame): train
+test (pd.DataFrame): test
+encode_col (List[str]): encoded columns
+target_col (str): target column
+cv (sklearn.model_selection._BaseKFold, optional): sklearn CV object</p>
+</dd>
+<dt>Returns:</dt><dd><p>Tuple[pd.DataFrame, pd.DataFrame]: train, test</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="ayniy.preprocessing.tabular.use_cols">
-<code class="descclassname">ayniy.preprocessing.tabular.</code><code class="descname">use_cols</code><span class="sig-paren">(</span><em>train: pandas.core.frame.DataFrame</em>, <em>test: pandas.core.frame.DataFrame</em>, <em>col_definition: dict</em><span class="sig-paren">)</span><a class="headerlink" href="#ayniy.preprocessing.tabular.use_cols" title="Permalink to this definition">¶</a></dt>
-<dd><p>col_definition: encode_col, target_col</p>
+<code class="sig-prename descclassname">ayniy.preprocessing.tabular.</code><code class="sig-name descname">use_cols</code><span class="sig-paren">(</span><em class="sig-param">train: pandas.core.frame.DataFrame, test: pandas.core.frame.DataFrame, encode_col: List[str], target_col: str</em><span class="sig-paren">)</span> &#x2192; Tuple[pandas.core.frame.DataFrame, pandas.core.frame.DataFrame]<a class="headerlink" href="#ayniy.preprocessing.tabular.use_cols" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select columns</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>train (pd.DataFrame): train
+test (pd.DataFrame): test
+encode_col (List[str]): encoded columns
+target_col (str): target column</p>
+</dd>
+<dt>Returns:</dt><dd><p>Tuple[pd.DataFrame, pd.DataFrame]: train, test</p>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
@@ -326,6 +468,7 @@ option: cv</p>
       <script type="text/javascript" src="../_static/jquery.js"></script>
       <script type="text/javascript" src="../_static/underscore.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
 
   
 
