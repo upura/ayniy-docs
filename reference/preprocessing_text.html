@@ -206,35 +206,125 @@
 <dl class="function">
 <dt id="ayniy.preprocessing.text.get_bert">
 <code class="sig-prename descclassname">ayniy.preprocessing.text.</code><code class="sig-name descname">get_bert</code><span class="sig-paren">(</span><em class="sig-param">train: pandas.core.frame.DataFrame</em>, <em class="sig-param">test: pandas.core.frame.DataFrame</em>, <em class="sig-param">text_col: str</em>, <em class="sig-param">n_components: int</em>, <em class="sig-param">lang: str</em>, <em class="sig-param">batch_size: int = 64</em><span class="sig-paren">)</span> &#x2192; Tuple[pandas.core.frame.DataFrame, pandas.core.frame.DataFrame]<a class="headerlink" href="#ayniy.preprocessing.text.get_bert" title="Permalink to this definition">¶</a></dt>
-<dd><p>col_definition: text_col
-option: n_components, lang={‘ja’, ‘en’}, batch_size</p>
+<dd><p>Get BERT features</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>train</strong> (<em>pd.DataFrame</em>) – train</p></li>
+<li><p><strong>test</strong> (<em>pd.DataFrame</em>) – test</p></li>
+<li><p><strong>text_col</strong> (<em>str</em>) – text column</p></li>
+<li><p><strong>n_components</strong> (<em>int</em>) – the output dimension</p></li>
+<li><p><strong>lang</strong> (<em>str</em>) – language chosen from ‘ja’ or ‘en’</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – unsupported language</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>train, test</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Tuple[pd.DataFrame, pd.DataFrame]</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="ayniy.preprocessing.text.get_count">
 <code class="sig-prename descclassname">ayniy.preprocessing.text.</code><code class="sig-name descname">get_count</code><span class="sig-paren">(</span><em class="sig-param">train: pandas.core.frame.DataFrame</em>, <em class="sig-param">test: pandas.core.frame.DataFrame</em>, <em class="sig-param">text_col: str</em>, <em class="sig-param">n_components: int</em>, <em class="sig-param">lang: str</em><span class="sig-paren">)</span> &#x2192; Tuple[pandas.core.frame.DataFrame, pandas.core.frame.DataFrame]<a class="headerlink" href="#ayniy.preprocessing.text.get_count" title="Permalink to this definition">¶</a></dt>
-<dd><p>col_definition: text_col
-option: n_components, lang={‘ja’, ‘en’}</p>
+<dd><p>Get count features</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>train</strong> (<em>pd.DataFrame</em>) – train</p></li>
+<li><p><strong>test</strong> (<em>pd.DataFrame</em>) – test</p></li>
+<li><p><strong>text_col</strong> (<em>str</em>) – text column</p></li>
+<li><p><strong>n_components</strong> (<em>int</em>) – the output dimension</p></li>
+<li><p><strong>lang</strong> (<em>str</em>) – language chosen from ‘ja’ or ‘en’</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – unsupported language</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>train, test</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Tuple[pd.DataFrame, pd.DataFrame]</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="ayniy.preprocessing.text.get_swem_mean">
 <code class="sig-prename descclassname">ayniy.preprocessing.text.</code><code class="sig-name descname">get_swem_mean</code><span class="sig-paren">(</span><em class="sig-param">train: pandas.core.frame.DataFrame</em>, <em class="sig-param">test: pandas.core.frame.DataFrame</em>, <em class="sig-param">text_col: str</em>, <em class="sig-param">n_components: int</em>, <em class="sig-param">lang: str</em><span class="sig-paren">)</span> &#x2192; Tuple[pandas.core.frame.DataFrame, pandas.core.frame.DataFrame]<a class="headerlink" href="#ayniy.preprocessing.text.get_swem_mean" title="Permalink to this definition">¶</a></dt>
-<dd><p>col_definition: text_col
-option: n_components, lang={‘ja’, ‘en’}</p>
+<dd><p>Get swem mean features</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>train</strong> (<em>pd.DataFrame</em>) – train</p></li>
+<li><p><strong>test</strong> (<em>pd.DataFrame</em>) – test</p></li>
+<li><p><strong>text_col</strong> (<em>str</em>) – text column</p></li>
+<li><p><strong>n_components</strong> (<em>int</em>) – the output dimension</p></li>
+<li><p><strong>lang</strong> (<em>str</em>) – language chosen from ‘ja’ or ‘en’</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – unsupported language</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>train, test</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Tuple[pd.DataFrame, pd.DataFrame]</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="ayniy.preprocessing.text.get_tfidf">
 <code class="sig-prename descclassname">ayniy.preprocessing.text.</code><code class="sig-name descname">get_tfidf</code><span class="sig-paren">(</span><em class="sig-param">train: pandas.core.frame.DataFrame</em>, <em class="sig-param">test: pandas.core.frame.DataFrame</em>, <em class="sig-param">text_col: str</em>, <em class="sig-param">n_components: int</em>, <em class="sig-param">lang: str</em><span class="sig-paren">)</span> &#x2192; Tuple[pandas.core.frame.DataFrame, pandas.core.frame.DataFrame]<a class="headerlink" href="#ayniy.preprocessing.text.get_tfidf" title="Permalink to this definition">¶</a></dt>
-<dd><p>col_definition: text_col
-option: n_components, lang={‘ja’, ‘en’}</p>
+<dd><p>Get tfidf features</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>train</strong> (<em>pd.DataFrame</em>) – train</p></li>
+<li><p><strong>test</strong> (<em>pd.DataFrame</em>) – test</p></li>
+<li><p><strong>text_col</strong> (<em>str</em>) – text column</p></li>
+<li><p><strong>n_components</strong> (<em>int</em>) – the output dimension</p></li>
+<li><p><strong>lang</strong> (<em>str</em>) – language chosen from ‘ja’ or ‘en’</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – unsupported language</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>train, test</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Tuple[pd.DataFrame, pd.DataFrame]</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="ayniy.preprocessing.text.text_normalize">
 <code class="sig-prename descclassname">ayniy.preprocessing.text.</code><code class="sig-name descname">text_normalize</code><span class="sig-paren">(</span><em class="sig-param">train: pandas.core.frame.DataFrame</em>, <em class="sig-param">text_col: str</em><span class="sig-paren">)</span> &#x2192; pandas.core.frame.DataFrame<a class="headerlink" href="#ayniy.preprocessing.text.text_normalize" title="Permalink to this definition">¶</a></dt>
-<dd><p>col_definition: text_col</p>
+<dd><p>Text normalization</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>train</strong> (<em>pd.DataFrame</em>) – train</p></li>
+<li><p><strong>text_col</strong> (<em>str</em>) – text column</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>train</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pd.DataFrame</p>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
