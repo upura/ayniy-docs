@@ -166,24 +166,39 @@
 <dl class="class">
 <dt id="ayniy.preprocessing.text.BM25Transformer">
 <em class="property">class </em><code class="sig-prename descclassname">ayniy.preprocessing.text.</code><code class="sig-name descname">BM25Transformer</code><span class="sig-paren">(</span><em class="sig-param">use_idf=True</em>, <em class="sig-param">k1=2.0</em>, <em class="sig-param">b=0.75</em><span class="sig-paren">)</span><a class="headerlink" href="#ayniy.preprocessing.text.BM25Transformer" title="Permalink to this definition">¶</a></dt>
-<dd><p>use_idf : boolean, optional (default=True)
-k1 : float, optional (default=2.0)
-b  : float, optional (default=0.75)
-References
-———-
-Okapi BM25: a non-binary model - Introduction to Information Retrieval
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>use_idf</strong> (<em>boolean</em><em>, </em><em>optional</em><em> (</em><em>default=True</em><em>)</em>) – </p></li>
+<li><p><strong>k1</strong> (<em>float</em><em>, </em><em>optional</em><em> (</em><em>default=2.0</em><em>)</em>) – </p></li>
+<li><p><strong>b</strong> (<em>float</em><em>, </em><em>optional</em><em> (</em><em>default=0.75</em><em>)</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">References</p>
+<p>Okapi BM25: a non-binary model - Introduction to Information Retrieval
 <a class="reference external" href="http://nlp.stanford.edu/IR-book/html/htmledition/okapi-bm25-a-non-binary-model-1.html">http://nlp.stanford.edu/IR-book/html/htmledition/okapi-bm25-a-non-binary-model-1.html</a></p>
 <dl class="method">
 <dt id="ayniy.preprocessing.text.BM25Transformer.fit">
 <code class="sig-name descname">fit</code><span class="sig-paren">(</span><em class="sig-param">X</em><span class="sig-paren">)</span><a class="headerlink" href="#ayniy.preprocessing.text.BM25Transformer.fit" title="Permalink to this definition">¶</a></dt>
-<dd><p>X : sparse matrix, [n_samples, n_features] document-term matrix</p>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>X</strong> (<em>sparse matrix</em><em>, </em><em>[</em><em>n_samples</em><em>, </em><em>n_features</em><em>] </em><em>document-term matrix</em>) – </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="ayniy.preprocessing.text.BM25Transformer.transform">
 <code class="sig-name descname">transform</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">copy=True</em><span class="sig-paren">)</span><a class="headerlink" href="#ayniy.preprocessing.text.BM25Transformer.transform" title="Permalink to this definition">¶</a></dt>
-<dd><p>X : sparse matrix, [n_samples, n_features] document-term matrix
-copy : boolean, optional (default=True)</p>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>sparse matrix</em><em>, </em><em>[</em><em>n_samples</em><em>, </em><em>n_features</em><em>] </em><em>document-term matrix</em>) – </p></li>
+<li><p><strong>copy</strong> (<em>boolean</em><em>, </em><em>optional</em><em> (</em><em>default=True</em><em>)</em>) – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
