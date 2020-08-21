@@ -249,7 +249,7 @@
 
 <dl class="function">
 <dt id="ayniy.preprocessing.tabular.detect_delete_cols">
-<code class="sig-prename descclassname">ayniy.preprocessing.tabular.</code><code class="sig-name descname">detect_delete_cols</code><span class="sig-paren">(</span><em class="sig-param">train: pandas.core.frame.DataFrame, test: pandas.core.frame.DataFrame, escape_col: List[str], threshold: float</em><span class="sig-paren">)</span> &#x2192; Tuple[pandas.core.frame.DataFrame, pandas.core.frame.DataFrame]<a class="headerlink" href="#ayniy.preprocessing.tabular.detect_delete_cols" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">ayniy.preprocessing.tabular.</code><code class="sig-name descname">detect_delete_cols</code><span class="sig-paren">(</span><em class="sig-param">train: pandas.core.frame.DataFrame, test: pandas.core.frame.DataFrame, escape_col: List[str], threshold: float</em><span class="sig-paren">)</span> &#x2192; Tuple[List, List, List]<a class="headerlink" href="#ayniy.preprocessing.tabular.detect_delete_cols" title="Permalink to this definition">¶</a></dt>
 <dd><p>Detect unnecessary columns for deleting</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -261,10 +261,10 @@
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>train, test</p>
+<dd class="field-even"><p>unique_cols, duplicated_cols, high_corr_cols</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>Tuple[pd.DataFrame, pd.DataFrame]</p>
+<dd class="field-odd"><p>Tuple[List, List, List]</p>
 </dd>
 </dl>
 </dd></dl>
